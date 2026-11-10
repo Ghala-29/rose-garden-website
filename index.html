@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title> Rose Garden | Flower Shop </title>
+    <style>
+        h1 {
+            color: palevioletred;
+            text-align: center;
+        }
+
+        h2 {
+            color: indianred;
+        }
+
+        h3 {
+            color: rosybrown;
+        }
+
+        p {
+            color: dimgray;
+            font-size: 16px;
+        }
+    </style>
+    <link rel="stylesheet" href="styleSheet1.css"><!--external css-->
+</head>
+
+<!--inline css-->
+<body style="background-color: lavenderblush;">
+
+
+    <nav>
+        Menu
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <hr><!---TO ADDING HORIZONTAL RULE -->
+    <h1>Welcome to Rosé Garden</h1>
+
+    <p>Beautiful flowers for every special moment.</p>
+
+    <p>
+        At Rosé Garden, we offer fresh and lovely flowers
+        for all occasions.
+    </p>
+
+    <h2>Our Flowers</h2> <!---the type of flowers we have in our shop-->
+    <ul>
+        <li>
+            Red Rose Bouquet
+            <ul>
+                <li>Small Bouquet</li>
+                <li>Large Bouquet</li>
+
+            </ul>
+            <div class="offer">Special Offer</div>
+            <img src="img/red-rose.jpg" alt="Red Roses" width="180">
+        </li>
+
+        <li>White Rose Bouquet</li>
+        <img src="img/white-rose.jpg" alt="white Roses" width="180">
+
+        <li>
+            Pink Tulip Bouquet
+            <ul>
+                <li>Pink Tulips</li>
+                <li>White Tulips</li>
+            </ul>
+
+            <img src="img/pink-tulips.jpg" alt="pink tulips" width="180">
+            <img src="img/white-tulips.jpg" alt="white tulips" width="180">
+
+
+        </li>
+
+        <li>
+            Mixed Flower Bouquet
+            <br>
+            <img src="img/mixed-flowers.jpg" alt="mixed flowers" width="180">
+        </li>
+    </ul>
+    <p>
+        <a href="#prices">View Flower Prices</a>
+
+    </p>
+    <h2>Explore Our Best Sellers</h2><!--based on rubic : dynamic picture and text allow user to click and showing another img -->
+
+    <p id="flowerName">Red Rose Bouquet</p>
+
+    <img id="featuredFlower" src="img/red-rose.jpg"
+         width="200" alt="Red Rose Bouquet">
+
+    <br>
+
+
+
+
+    <button type="button" onclick="changeFlower()">
+        Show Another Flower
+    </button>
+    <section>
+        <h2>Why Choose Rosé Garden?</h2>
+
+        <article>
+            <h3>Fresh Flowers</h3>
+            <p>We offer fresh and beautiful flowers for every occasion.</p>
+        </article>
+
+        <article>
+            <h3>Special Gifts</h3>
+            <p>Our flower bouquets are perfect for birthdays, weddings, and special moments.</p>
+        </article>
+    </section>
+    <h2 id="prices">Flower Prices</h2>
+
+    <table border="1">
+        <tr>
+            <th>Flower Type</th>
+            <th>Color</th>
+            <th>Price</th>
+        </tr>
+
+        <tr>
+            <td>Rose Bouquet</td>
+            <td>Red</td>
+            <td>80 SAR</td>
+        </tr>
+
+        <tr>
+            <td>Rose Bouquet</td>
+            <td>White</td>
+            <td>80 SAR</td>
+        </tr>
+
+        <tr>
+            <td>Tulip Bouquet</td>
+            <td>Pink</td>
+            <td>90 SAR</td>
+        </tr>
+
+        <tr>
+            <td>Tulip Bouquet</td>
+            <td>White</td>
+            <td>90 SAR</td>
+        </tr>
+
+        <tr>
+            <td>Mixed Flower Bouquet</td>
+            <td>Mixed Colors</td>
+            <td>100 SAR</td>
+        </tr>
+    </table>
+    <h2>Order Your Flowers</h2>
+
+    <form>
+        <label>Customer Name:</label>
+        <input type="text" id="customerName">
+        <br><br>
+
+        <label>Choose Your Flowers:</label>
+        <select id="flowerType">
+            <option value="">Select a flower to order</option>
+            <option value="red">Red Rose Bouquet</option>
+            <option value="white">White Rose Bouquet</option>
+            <option value="pink">Pink Tulip Bouquet</option>
+            <option value="whiteTulip">White Tulip Bouquet</option>
+            <option value="mixed">Mixed Flower Bouquet</option>
+        </select>
+        <br><br>
+
+        <label>Quantity:</label>
+        <input type="number" id="quantity" min="1">
+        <br><br>
+
+        <button type="button" id="orderbutton" onclick="showMessage()">Order Now</button> <!---I USE BUTTON TYPE RETHER THAN SUBMIT TYPE -->
+    </form>
+    <script src="Script1.js"></script>
+    <!-- Image Mapping -->
+    <h2>Discover Rosé Garden</h2>
+    <p>Click on the flower image to learn more about us.</p>
+
+    <img src="img/about_us-design.jpg"
+         width="200" height="200"
+         usemap="#flowerMap"
+         alt="Flowers">
+
+    <map name="flowerMap">
+        <area shape="rect"
+              coords="0,0,200,200"
+              href="about.html"
+              alt="About Us">
+    </map>
+</body>
+</html>
